@@ -1,0 +1,4 @@
+obj_iteravel = ["Jose","Maria","Jeses"] 
+for item in obj_iteravel:
+   print("\nItem :",item)
+print("\nPrograma Finalizado...")
