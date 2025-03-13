@@ -1,0 +1,30 @@
+#Aula_22_02_Programa_Entrada
+
+print("Menu: 1[Calcular] - 2[Sair]")
+escolha = int(input())
+while escolha==1:
+   print("Digite o primeiro número:")
+   num1 = int(input())
+   print("Digite o segundo número:")
+   num2 = int(input())
+   if num1<=0 or num2 <=0:
+      print("Números Inválidos...")
+   else:
+      print("Escolha Operação: '1[Soma] - 2[Subtração] - 3[Multiplicação] - 4[Divisão]")
+      oper = int(input())
+      if oper!=1 and oper!=2 and oper!=3 and oper!=4:
+       print("Operação Inválida...")
+   else:
+      if oper==1:
+       print("Soma = ",num1+num2)
+      if oper==2:
+       print("Subtração = ",num1-num2)
+      if oper==3:
+       print("Multiplicação = ",num1*num2)
+      if oper==4:
+       print("Divisão = ",num1/num2)
+   print("Menu: 1[Calcular] - 2[Sair]")
+   escolha = int(input())
+
+print("\nPrograma Finalizado!!!")
+
