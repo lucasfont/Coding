@@ -1,0 +1,24 @@
+print("Digite o primeiro número, pressione enter, digite o segundo número, e pressione enter novamente:")
+num1 = int(input())
+num2 = int(input())
+if num1<=0 or num2<=0:
+    print("Números inválidos...")
+else:
+   print("Digite a operação desejada: 1[soma], 2[subtração], 3[multiplicação] ou 4[divisão]")
+   operacao_escolhida = int(input())
+   if operacao_escolhida ==1:
+    soma = num1 + num2
+    print("Os numeros digitados foram: ",num1,num2)
+    print("A soma é: ",soma)
+   if operacao_escolhida ==2:
+    sub = num1 - num2
+    print("Os numeros digitados foram: ",num1,num2)
+    print("A subtracao é: ",sub)
+   if operacao_escolhida ==3:
+    mult = num1 * num2
+    print("Os numeros digitados foram: ",num1,num2)
+    print("A multiplicacao é: ",mult)
+   if operacao_escolhida ==4:
+    div = num1 / num2
+    print("Os numeros digitados foram: ",num1,"e",num2)
+    print("A divisao é: ",div)
