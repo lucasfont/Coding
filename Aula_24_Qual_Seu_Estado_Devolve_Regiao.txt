@@ -1,0 +1,28 @@
+#FUNÇÃO
+def func_reg(est):
+   if est=="ceara" or est=="ceará" or est=="ce" or est=="piauí" or est=="piaui" or est=="pi" or est=="maranhao" or est=="maranhão" or est=="ma" or est=="rio grande do norte" or est=="rn" or est=="paraiba" or est=="paraíba" or est=="pa" or est=="pernambuco" or est=="pb" or est=="alagoas" or est=="al" or est=="sergipe" or est=="se" or est=="bahia" or est=="ba":
+      resultado = ("\nRegião Nordeste")
+      return resultado
+   if est=="espirito santo" or est=="espírito santo" or est=="es" or est=="minas gerais" or est=="mg" or est=="minas" or est=="rio de janeiro" or est=="rj" or est=="rio" or est=="são paulo" or est=="sao paulo" or est=="sp":
+      resultado = ("\nRegião Sudeste")
+      return resultado
+   if est=="mato grosso" or est=="mt" or est=="distrito federal" or est=="df" or est=="goias" or est=="goiás" or est=="go" or est=="mato grosso do sul" or est=="ms":
+      resultado = ("\nRegião Centro Oeste")
+      return resultado
+   if est=="parana" or est=="paraná" or est=="pr" or est=="santa catarina" or est=="sc" or est=="rio grande do sul" or est=="rs":
+      resultado = ("\nRegião Sul")
+      return resultado
+   if est=="amazonas" or est=="am" or est=="acre" or est=="ac" or est=="rondonia" or est=="rondônia" or est=="ro" or est=="roraima" or est=="rr" or est=="amapa" or est=="amapá" or est=="ap" or est=="para" or est=="pará" or est=="pa" or est=="tocantins" or est=="to":
+      resultado = ("\nRegião Norte")
+      return resultado
+   else:
+      print("Digite seu estado corretamente: ")
+      texto = input()
+      est = texto.lower()
+      return func_reg(est)
+#PROGRAMA PRINCIPAL
+print("Digite seu estado: ")
+texto = input()
+est = texto.lower()
+regiao = func_reg(est)
+print("\nVocê mora na :",regiao)
