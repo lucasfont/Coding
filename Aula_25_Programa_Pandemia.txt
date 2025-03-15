@@ -1,0 +1,48 @@
+#   CRIANDO SEGUNDA FUNÇAO  #
+# DEFINIR ASSINATURA DA FUNÇAO QUE RECEBE QUATRO PARAMETROS #
+def teste_cov(resp1,resp2,resp3,resp4):
+   if resp1==1 and resp2==1 and resp3==1 and resp4==1:
+      diagnostico = "\nVá ao médico, urgente!!!"
+      return diagnostico
+   else:
+      if resp3==1 or resp4==1:
+         diagnostico = "\nVá ao médico, urgente!!!"
+         return diagnostico
+      else:
+         diagnostico = "\nAguarde em casa!!!"
+         return diagnostico
+def valida_resp(respx):
+   while respx<1 or respx>2:
+      valida = "Resposta Inválida..."
+      print("Por favor, Responda [1]SIM ou [2]NÃO")
+      respx = int(input())
+   return respx
+#PROGRAMA PRINCIPAL 
+print("\n=== MENU TESTE COVID === ")
+print("Para as perguntas a seguir digite [1]SIM ou 2[NÃO]")
+#       COLETA DE DADOS       # 
+print("Tem sintoma febril? [1]SIM ou [2]NÃO")
+resp1 = int(input())
+res_val = valida_resp(resp1)
+resp1 = res_val
+print("Tem sintoma de tosse? [1]SIM ou [2]NÃO")
+resp2 = int(input())
+res_val = valida_resp(resp2)
+resp2 = res_val
+print("Tem sintoma de falta de paladar? [1]SIM ou [2]NÃO")
+resp3 = int(input())
+res_val = valida_resp(resp3)
+resp3 = res_val
+print("Tem sintoma de falta de olfato? [1]SIM ou [2]NÃO")
+resp4 = int(input())
+res_val = valida_resp(resp4)
+resp4 = res_val
+#      FIM DA COLETA DE DADOS  #
+# LOGICA DE TESTE #
+resultado = teste_cov(resp1,resp2,resp3,resp4)
+print("\nResultado do teste: ",resultado)
+print("\nFim do programa...")
+
+
+
+
