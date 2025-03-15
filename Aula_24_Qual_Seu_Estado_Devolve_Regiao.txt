@@ -1,0 +1,12 @@
+#FUNÇÃO
+def func_reg(est):
+   if est=="ceara" or est=="ceará" or est=="piauí" or est=="piaui":
+      resultado = ("\nRegião Nordeste")
+   if est=="espirito santo" or est=="espírito santo" or est=="minas gerais" or est=="rio de janeiro" or est=="são paulo"
+      resultado = ("\nRegião Sudest")
+#PROGRAMA PRINCIPAL
+print("Digite seu estado: ")
+texto = input()
+est = texto.lower()
+região = func_reg(est)
+print("\nVocê mora na :",regiao)
