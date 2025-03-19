@@ -1,0 +1,55 @@
+def saudacao():
+    print("\nOlá...")
+
+def menu():
+    print("\n==   M E N U   ===")
+    print("\nDigite [1]Entrar ou [2]Sair")
+    menu = int(input())
+    if menu==2:
+       exit()
+    while menu<1 or menu>2:
+       print("\Digite [1]Entrar ou [2]Sair")
+       menu = int(input())
+
+def diagnostico():
+    cont=0
+    cont_febre=0
+    cont_tosse=0
+    cont_paladar=0
+    cont_olfato=0
+    cont_palolf=0
+    print("\n\nEntrou no diagnostico...")
+    while cont<2:
+       resp1 = int(input("\nTem Febre: [1]SIM ou [2]NAO\n"))
+       resp2 = int(input("\nTem Tosse: [1]SIM ou [2]NAO\n"))
+       resp3 = int(input("\nTem Paladar: [1]SIM ou [2]NAO\n"))
+       resp4 = int(input("\nTem Olfato: [1]SIM ou [2]NAO\n"))
+       print("\n\nRespostas:",resp1,resp2,resp3,resp4)
+       if resp1==1:
+          cont_febre=cont_febre + 1
+       if resp2==1:
+          cont_tosse=cont_tosse + 1
+       if resp3==1:
+          cont_paladar=cont_paladar + 1
+       if resp4==1:
+          cont_olfato=cont_olfato + 1
+       if resp3==1 and resp4==1:
+          cont_palolf=cont_palolf + 1
+       cont = cont + 1
+    print("\nRespostas Estatísticas:")
+    print("\nFebre: ",cont_febre)
+    print("\nTosse: ",cont_tosse)
+    print("\nPaladar: ",cont_paladar)
+    print("\nOlfato: ",cont_olfato)
+    print("\nPaladar e Olfato: ",cont_palolf)
+
+
+#PRINCIPAL
+saudacao()
+menu()
+diagnostico()
+~                                                                                               
+~                                                                                               
+~                                                                                               
+~                                                                                               
+"covid_estat.py" 50L, 1375B
