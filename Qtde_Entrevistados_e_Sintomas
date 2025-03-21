@@ -1,0 +1,54 @@
+def saudacao():
+   print("\nEntrou na Saudacao...")
+
+def menu():
+   print("\nEntrou no MENU...")
+   print("Digite [1]Entrar ou [2]Sair")
+   menu = int(input())
+   while menu!=1 and menu!=2:
+      print("Opçao inválida")
+      menu =int(input())
+   if menu==2:
+      print("\nPrograma Finalizado")
+      exit()
+
+def usuarios():
+   print("\nDigite Quantidade de Entrevistados: ")
+   users=int(input())
+   return users
+
+def diagnostico(users):
+   rodada=1
+   cont_febre=0
+   cont_tosse=0
+   print("\nEntrou no Diagnostico...")
+   print("\nQuantidade de Usuários a entrevistar =",users)
+   while rodada<=users:
+      print("\nEntrevistado Numero:",rodada)
+      print("Tem Febre:[1]SIM ou [NAO]")
+      res1 = int(input())
+      print("Tem Tosse:[1]SIM ou [NAO]")
+      res2 = int(input())
+      cont_febre,cont_tosse = calculo(res1,res2,cont_febre,cont_tosse)
+      rodada=rodada+1
+   print("\nResultados\n")
+   print("\nFebre=",cont_febre)
+   print("\nTosse=",cont_tosse)
+
+def calculo(res1,res2,cont_febre,cont_tosse):
+   if res1==1:
+      cont_febre=cont_febre+1
+   if res2==1:
+      cont_tosse=cont_tosse+1
+   return cont_febre,cont_tosse
+
+
+def final():
+   print("\nFINALIZOU PROGRAMA...\n\n")
+
+#Principal
+saudacao()
+menu()
+users=usuarios()
+diagnostico(users)
+final()
